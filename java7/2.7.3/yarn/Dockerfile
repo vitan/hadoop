@@ -1,12 +1,12 @@
 FROM		        2breakfast/hadoop:2.7.3-base
 MAINTAINER      Weitao Zhou <wtzhou@dataman-inc.com>
 
-ENV             HDFS_NAMENODE_RPC_HOST
+ENV             HDFS_NAMENODE_RPC_HOST=please_input_nn_ip
 ENV             HDFS_NAMENODE_RPC_PORT=8020
 ENV             JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
 ENV             RM_SCHEDULER=CapacityScheduler
 ENV             HADOOP_TMP_DIR=/tmp/hadoop
-ENV             HOST_IP
+ENV             HOST_IP=please_input_host_ip
 ENV             ROLE=resourcemanager
 
 ADD             conf/* ${HADOOP_INSTALL_DIR}/etc/hadoop/
