@@ -6,7 +6,8 @@ ENV             HDFS_NAMENODE_RPC_HOST=please_input_nn_ip
 ENV             HDFS_NAMENODE_RPC_PORT=8020
 ENV             RM_SCHEDULER=org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.CapacityScheduler
 ENV             HADOOP_TMP_DIR=/tmp/hadoop
-ENV             HOST_IP=please_input_host_ip
+ENV             RM_HOST=please_input_host_ip
+ENV             JH_HOST=please_input_host_ip
 ENV             ROLE=resourcemanager
 
 ADD             conf/* ${HADOOP_INSTALL_DIR}/etc/hadoop/

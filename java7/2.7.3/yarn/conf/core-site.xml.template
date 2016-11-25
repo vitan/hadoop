@@ -4,6 +4,6 @@
 <configuration>
   <property>
     <name>fs.defaultFS</name>
-    <value>hdfs://${HDFS_NAMENODE_RPC_HOST}:${HDFS_NAMENODE_RPC_PORT}</value>
+    <value>hdfs://HDFS_NAMENODE_RPC_HOST:HDFS_NAMENODE_RPC_PORT</value>
   </property>
 </configuration>

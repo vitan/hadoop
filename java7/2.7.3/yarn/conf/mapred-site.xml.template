@@ -4,10 +4,10 @@
 <configuration>
   <property>
     <name>mapreduce.jobhistory.address</name>
-    <value>${HOST_IP}:10020</value>
+    <value>JH_HOST:10020</value>
   </property>
   <property>
     <name>mapreduce.jobhistory.webapp.address</name>
-    <value>${HOST_IP}:19888</value>
+    <value>JH_HOST:19888</value>
   </property>
 </configuration>

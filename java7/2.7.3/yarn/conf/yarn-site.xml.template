@@ -4,18 +4,18 @@
 <configuration>
   <property>
     <name>yarn.resourcemanager.hostname</name>
-    <value>${HOST_IP}</value>
+    <value>RM_HOST</value>
   </property>
   <property>
     <name>yarn.resourcemanager.scheduler.class</name>
-    <value>${RM_SCHEDULER}</value>
+    <value>RM_SCHEDULER</value>
   </property>
   <property>
     <name>yarn.nodemanager.local-dirs</name>
-    <value>${HADOOP_TMP_DIR}/nm-local-dir</value>
+    <value>HADOOP_TMP_DIR/nm-local-dir</value>
   </property>
   <property>
     <name>yarn.nodemanager.log-dirs</name>
-    <value>${HADOOP_TMP_DIR}/userlogs</value>
+    <value>HADOOP_TMP_DIR/userlogs</value>
   </property>
 </configuration>
