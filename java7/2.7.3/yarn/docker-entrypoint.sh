@@ -6,10 +6,10 @@ sed "s/RM_HOST/$RM_HOST/;s/RM_SCHEDULER/$RM_SCHEDULER/;s/HADOOP_TMP_DIR/$HADOOP_
 
 case "$ROLE" in
     resourcemanager|nodemanager|proxyserver):
-        ${HADOOP_INSTALL_DIR}/bin/yarn --daemon start $ROLE
+        ${HADOOP_INSTALL_DIR}/bin/yarn $ROLE
         ;;
     historyserver):
-        ${HADOOP_INSTALL_DIR}/bin/mapred --daemon start $ROLE
+        ${HADOOP_INSTALL_DIR}/bin/mapred $ROLE
         ;;
     *)
         exit 1;
