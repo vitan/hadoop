@@ -1,12 +1,11 @@
-FROM		2breakfast/hadoop:2.7.3-base
+FROM       2breakfast/hadoop:2.7.3-base
 MAINTAINER Weitao Zhou <wtzhou@dataman-inc.com>
 
-ENV     	HDFS_NAMENODE_ROOT_DIR=/var/hdfs/namenode
+ENV       HDFS_NAMENODE_ROOT_DIR=/var/hdfs/namenode
 ENV       JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+ENV       CLUSTER_NAME=hdfs_cluster
 
-ADD       conf/core-site.xml ${HADOOP_INSTALL_DIR}/etc/hadoop/core-site.xml
-ADD       conf/hdfs-site.xml ${HADOOP_INSTALL_DIR}/etc/hadoop/hdfs-site.xml
-
+ADD       conf/* ${HADOOP_INSTALL_DIR}/etc/hadoop/
 ADD       docker-entrypoint.sh /usr/local/sbin/docker-entrypoint.sh
 
 VOLUME    ["${HDFS_NAMENODE_ROOT_DIR}"]
