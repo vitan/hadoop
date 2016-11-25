@@ -4,6 +4,7 @@ MAINTAINER Weitao Zhou <wtzhou@dataman-inc.com>
 ENV       HDFS_NAMENODE_ROOT_DIR=/var/hdfs/namenode
 ENV       JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
 ENV       CLUSTER_NAME=hdfs_cluster
+ENV       PUBLISHED_IP=please_input_host_ip
 
 ADD       conf/* ${HADOOP_INSTALL_DIR}/etc/hadoop/
 ADD       docker-entrypoint.sh /usr/local/sbin/docker-entrypoint.sh

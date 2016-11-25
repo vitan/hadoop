@@ -9,6 +9,7 @@ ENV             HADOOP_TMP_DIR=/tmp/hadoop
 ENV             RM_HOST=please_input_host_ip
 ENV             JH_HOST=please_input_host_ip
 ENV             ROLE=resourcemanager
+ENV             PUBLISHED_IP=please_input_host_ip
 
 ADD             conf/* ${HADOOP_INSTALL_DIR}/etc/hadoop/
 ADD             docker-entrypoint.sh /usr/local/sbin/docker-entrypoint.sh

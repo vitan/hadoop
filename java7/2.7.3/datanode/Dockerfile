@@ -1,10 +1,11 @@
-FROM		        2breakfast/hadoop:2.7.3-base
+FROM            2breakfast/hadoop:2.7.3-base
 MAINTAINER      Weitao Zhou <wtzhou@dataman-inc.com>
 
-ENV     	      HDFS_DATANODE_ROOT_DIR=/var/hdfs/datanode
-ENV     	      HDFS_NAMENODE_RPC_HOST=0.0.0.0
-ENV     	      HDFS_NAMENODE_RPC_PORT=8020
+ENV             HDFS_DATANODE_ROOT_DIR=/var/hdfs/datanode
+ENV             HDFS_NAMENODE_RPC_HOST=0.0.0.0
+ENV             HDFS_NAMENODE_RPC_PORT=8020
 ENV             JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+ENV             PUBLISHED_IP=please_input_host_ip
 
 ADD             conf/* ${HADOOP_INSTALL_DIR}/etc/hadoop/
 ADD             docker-entrypoint.sh /usr/local/sbin/docker-entrypoint.sh
