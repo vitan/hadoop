@@ -10,6 +10,8 @@ ENV             RM_HOST=please_input_host_ip
 ENV             JH_HOST=please_input_host_ip
 ENV             ROLE=resourcemanager
 ENV             PUBLISHED_IP=please_input_host_ip
+ENV             RESOURCE_MEM_MB=8192
+ENV             RESOURCE_CPU_VCORE=8
 
 ADD             conf/* ${HADOOP_INSTALL_DIR}/etc/hadoop/
 ADD             docker-entrypoint.sh /usr/local/sbin/docker-entrypoint.sh

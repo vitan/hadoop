@@ -18,4 +18,12 @@
     <name>yarn.nodemanager.log-dirs</name>
     <value>HADOOP_TMP_DIR/userlogs</value>
   </property>
+  <property>
+    <name>yarn.nodemanager.resource.memory-mb</name>
+    <value>RESOURCE_MEM_MB</value>
+  </property>
+  <property>
+    <name>yarn.nodemanager.resource.cpu-vcores</name>
+    <value>RESOURCE_CPU_VCORE</value>
+  </property>
 </configuration>

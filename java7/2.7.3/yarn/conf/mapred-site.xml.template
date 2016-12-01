@@ -10,4 +10,8 @@
     <name>mapreduce.jobhistory.webapp.address</name>
     <value>JH_HOST:19888</value>
   </property>
+  <property>
+    <name>mapreduce.framework.name</name>
+    <value>yarn</value>
+  </property>
 </configuration>
