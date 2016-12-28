@@ -17,5 +17,6 @@ RUN chmod u+x /opt/ambari-agent/init-agent.sh
 ADD init/ambari-agent.service /etc/systemd/system/ambari-agent.service
 
 RUN systemctl enable ambari-agent
+RUN systemctl enable ntpd
 
 RUN echo DefaultEnvironment=\"JAVA_HOME=$JAVA_HOME\" >> /etc/systemd/system.conf
