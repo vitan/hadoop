@@ -13,6 +13,8 @@ ENV AMBARI_SERVER_ADDR localhost
 
 ADD init/init-agent.sh /opt/ambari-agent/init-agent.sh
 RUN chmod u+x /opt/ambari-agent/init-agent.sh
+ADD non-init-entrypoint.sh /opt/ambari-agent/non-init-entrypoint.sh
+RUN chmod u+x /opt/ambari-agent/non-init-entrypoint.sh
 
 ADD init/ambari-agent.service /etc/systemd/system/ambari-agent.service
 
