@@ -7,7 +7,9 @@ ADD http://public-repo-1.hortonworks.com/ambari/centos7/2.x/updates/2.1.2/ambari
 RUN yum install -y ambari-server && yum clean all
 
 ADD init/init-server.sh /opt/ambari-server/init-server.sh
+ADD non-init-entrypoint.sh /opt/ambari-server/non-init-entrypoint.sh
 RUN chmod u+x /opt/ambari-server/init-server.sh
+RUN chmod u+x /opt/ambari-server/non-init-entrypoint.sh
 
 # add mysql and psql connectors to ambari-server so it can be downloaded by services (e.g.: Ranger)
 ADD http://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.39.tar.gz /var/lib/ambari-server/resources/mysql-jdbc-driver.jar
